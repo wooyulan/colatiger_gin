@@ -8,7 +8,7 @@ import (
 func main() {
 
 	// 初始化配置
-	bootstrap.InitializeConfig()
+	global.App.Config.InitializeConfig()
 
 	// 初始化日志
 	global.App.Log = bootstrap.InitializeLog()
@@ -28,6 +28,7 @@ func main() {
 	bootstrap.InitializeValidator()
 	// 初始化Redis
 	global.App.Redis = bootstrap.InitializeRedis()
+
 	// 启动服务器
 	bootstrap.RunServer()
 }

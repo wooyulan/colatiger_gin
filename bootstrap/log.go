@@ -3,11 +3,12 @@ package bootstrap
 import (
 	"colatiger/global"
 	"colatiger/utils/path"
+	"os"
+	"time"
+
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	"gopkg.in/natefinch/lumberjack.v2"
-	"os"
-	"time"
 )
 
 var (

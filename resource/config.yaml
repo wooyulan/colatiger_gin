@@ -2,11 +2,12 @@ app: # 应用基本配置
   env: local # 环境名称
   port: 6000 # 服务监听端口号
   app_name: colatiger # 应用名称
+  run_log_type: test # gin框架在运行的时候默认是debug模式 有： 开发：debug，生产：release，测试模式：test
 
 database:
   driver: mysql # 数据库驱动
   host: 127.0.0.1 # 域名
-  port: 3308 # 端口号
+  port: 3306 # 端口号
   database: cola_tiger # 数据库名称
   username: root # 用户名
   password: Abcd1234 # 密码
@@ -15,11 +16,11 @@ database:
   max_open_conns: 100 # 打开数据库连接的最大数量
   log_mode: info # 日志级别
   enable_file_log_writer: true # 是否启用日志文件
-  log_filename: sql.log # 日志文件名称
+  log_filename: _err.log # 日志文件名称
 
 redis:
   host: 127.0.0.1
-  port: 6379
+  port: 6380
   db: 0
   password:
 
@@ -42,7 +43,7 @@ storage:
 
 log:
   level: info # 日志等级
-  root_dir: ./storage/logs # 日志根目录
+  root_dir: ./logs # 日志根目录
   filename: app.log # 日志文件名称
   format: # 写入格式 可选json
   show_line: true # 是否显示调用行

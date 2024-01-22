@@ -2,6 +2,7 @@ package global
 
 import (
 	"colatiger/config"
+
 	"github.com/go-redis/redis/v8"
 	"github.com/spf13/viper"
 	"go.uber.org/zap"
@@ -10,7 +11,7 @@ import (
 
 type Application struct {
 	ConfigViper *viper.Viper
-	Config      config.Configuration
+	Config      config.Config
 	Log         *zap.Logger
 	DB          *gorm.DB
 	Redis       *redis.Client
